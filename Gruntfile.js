@@ -16,10 +16,9 @@ module.exports = function (grunt) {
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn'
+    cdnify: 'grunt-google-cdn',
     buildcontrol: 'grunt-build-control'
-  });
-
+});
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -41,7 +40,7 @@ module.exports = function (grunt) {
         },
         pages: {
           options: {
-            remote: 'git@github.com:your_github_user/your_webapp.git',
+            remote: 'git@github.com:MatthewBorda/wats4000FinalProject.git'
             branch: 'gh-pages'
           }
         }
