@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
- buildcontrol: {
+   buildcontrol: {
       options: {
         dir: 'dist',
         commit: true,
@@ -40,7 +40,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'https://github.com/MatthewBorda/wats4000FinalProject.git',
+          remote: 'git@github.com:matthewborda/wats4000FinalProject.git',
           branch: 'gh-pages'
         }
       }
@@ -62,7 +62,7 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
-   sass: {
+  sass: {
     files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
     tasks: ['sass:server', 'autoprefixer']
 },
@@ -241,8 +241,7 @@ module.exports = function (grunt) {
     }, 
 
     // Compiles Sass to CSS and generates necessary files if requested
-    
-sass: {
+   sass: {
     options: {
         includePaths: [
             'bower_components'
@@ -267,6 +266,7 @@ sass: {
         }]
     }
 },
+
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -448,7 +448,7 @@ sass: {
     },
 
     // Run some tasks in parallel to speed up the build process
-concurrent: {
+   concurrent: {
   server: [
     'sass:server',
     'copy:styles'
@@ -463,7 +463,6 @@ concurrent: {
     'svgmin'
   ]
 },
-
     // Test settings
     karma: {
       unit: {

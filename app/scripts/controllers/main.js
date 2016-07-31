@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name wats4000FinalProjectApp.controller:MainCtrl
+ * @name workspaceApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the wats4000FinalProjectApp
+ * Controller of the workspaceApp
  */
-angular.module('wats4000FinalProjectApp')
+angular.module('workspaceApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

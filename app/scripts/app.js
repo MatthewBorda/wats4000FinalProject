@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name wats4000FinalProjectApp
+ * @name workspaceApp
  * @description
- * # wats4000FinalProjectApp
+ * # workspaceApp
  *
  * Main module of the application.
  */
 angular
-  .module('wats4000FinalProjectApp', [
+  .module('workspaceApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',

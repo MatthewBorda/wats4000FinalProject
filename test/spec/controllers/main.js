@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('wats4000FinalProjectApp'));
+  beforeEach(module('workspaceApp'));
 
   var MainCtrl,
     scope;
