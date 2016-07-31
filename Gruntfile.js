@@ -20,17 +20,20 @@ module.exports = function (grunt) {
     buildcontrol: 'grunt-build-control'
 });
   // Configurable paths for the application
-  var appConfig = {
-    app: require('./bower.json').appPath || 'app',
+//   var appConfig = {
+//     app: require('./bower.json').appPath || 'app',
+//     dist: 'dist'
+//   };
+  var config = {
+    app: 'app',
     dist: 'dist'
   };
-
   // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
     //yeoman: appConfig,
-     config: appConfig,
+     config: config,
       buildcontrol: {
         options: {
           dir: 'dist',
