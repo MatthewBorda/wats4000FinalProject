@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 
     // Project settings
     //yeoman: appConfig,
-     config: config,
+     config: appConfig,
       buildcontrol: {
         options: {
           dir: 'dist',
