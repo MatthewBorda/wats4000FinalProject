@@ -1,9 +1,20 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-   Your're kidding me right?
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h1> Movie name for {{searchbox.name}}</h1>
+  
+<p class="lead">
+<div ng-init="query='Seattle'">
+  <p>
+       <label for="movieSearch">Search:
+            <input type="text" name="movieSearch" ng-model="movieSearch">
+          </label>
   </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+ <p>
+          <button class="btn btn-lg btn-primary" ng-click="refreshSearchBox()">Search Movies</button>
+        </p>
+  <dl>
+        <dt>Movie detail</dt>
+    <dd>{{searchbox.results[0].original_title}}</dd>
+      </dl>
+  </div>
+  </p>
 </div>

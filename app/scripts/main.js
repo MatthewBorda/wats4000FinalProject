@@ -1,1 +1,12 @@
-console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
+
+// myApp? wats
+angular.module('workspaceApp')
+  .controller('MainCtrl', function ($scope, searchbox) {
+    $scope.current = searchbox.query();
+  
+    $scope.refreshSearchBox = function(){
+        $scope.searchbox = searchbox.query({
+            location: $scope.query
+        });
+    };
+  });
