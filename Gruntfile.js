@@ -1,4 +1,4 @@
-// Generated on 2016-07-20 using generator-angular 0.15.1
+// Generated on 2016-07-31 using generator-angular 0.15.1
 'use strict';
 
 // # Globbing
@@ -18,38 +18,33 @@ module.exports = function (grunt) {
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn',
     buildcontrol: 'grunt-build-control'
-});
+  });
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
     dist: 'dist'
   };
-//   var config = {
-//     app: 'app',
-//     dist: 'dist'
-//   };
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
-    //yeoman: appConfig,
-     config: appConfig,
-      buildcontrol: {
-        options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-        },
-        pages: {
-          options: {
-            remote: 'git@github.com:MatthewBorda/wats4000FinalProject.git',
-            branch: 'gh-pages'
-          }
-        }
+    yeoman: appConfig,
+ buildcontrol: {
+      options: {
+        dir: 'dist',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
       },
-
-
+      pages: {
+        options: {
+          remote: 'https://github.com/MatthewBorda/wats4000FinalProject.git',
+          branch: 'gh-pages'
+        }
+      }
+    },
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       bower: {
@@ -67,10 +62,10 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
-      sass: {
-      files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-      tasks: ['sass:server', 'autoprefixer']
-  },
+   sass: {
+    files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+    tasks: ['sass:server', 'autoprefixer']
+},
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -243,34 +238,35 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    },
+    }, 
 
     // Compiles Sass to CSS and generates necessary files if requested
-    sass: {
-        options: {
-            includePaths: [
-                'bower_components'
-            ]
-        },
-        dist: {
-            files: [{
-                expand: true,
-                cwd: '<%= yeoman.app %>/styles',
-                src: ['*.scss'],
-                dest: '.tmp/styles',
-                ext: '.css'
-            }]
-        },
-        server: {
-            files: [{
-                expand: true,
-                cwd: '<%= yeoman.app %>/styles',
-                src: ['*.scss'],
-                dest: '.tmp/styles',
-                ext: '.css'
-            }]
-        }
+    
+sass: {
+    options: {
+        includePaths: [
+            'bower_components'
+        ]
     },
+    dist: {
+        files: [{
+            expand: true,
+            cwd: '<%= yeoman.app %>/styles',
+            src: ['*.scss'],
+            dest: '.tmp/styles',
+            ext: '.css'
+        }]
+    },
+    server: {
+        files: [{
+            expand: true,
+            cwd: '<%= yeoman.app %>/styles',
+            src: ['*.scss'],
+            dest: '.tmp/styles',
+            ext: '.css'
+        }]
+    }
+},
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -387,7 +383,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       dist: {
         options: {
-          module: 'wats4000FinalProjectApp',
+          module: 'workspaceApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -452,21 +448,22 @@ module.exports = function (grunt) {
     },
 
     // Run some tasks in parallel to speed up the build process
-    concurrent: {
-      server: [
-        'sass:server',
-        'copy:styles'
-      ],
-      test: [
-        'copy:styles'
-      ],
-      dist: [
-        'sass',
-        'copy:styles',
-        'imagemin',
-        'svgmin'
-      ]
-    },
+concurrent: {
+  server: [
+    'sass:server',
+    'copy:styles'
+  ],
+  test: [
+    'copy:styles'
+  ],
+  dist: [
+    'sass',
+    'copy:styles',
+    'imagemin',
+    'svgmin'
+  ]
+},
+
     // Test settings
     karma: {
       unit: {
