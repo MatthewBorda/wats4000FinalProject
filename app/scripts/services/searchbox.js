@@ -7,7 +7,7 @@
  * # searchBox
  * Factory in the workspaceApp.
  */
-angular.module('wats4000FinalProject')
+angular.module('workspaceApp')
   .factory('searchbox', function ($resource) {
     // Service logic
     // ...

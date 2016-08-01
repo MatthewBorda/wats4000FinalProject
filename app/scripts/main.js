@@ -1,6 +1,6 @@
 
 // myApp? wats4000FinalProject workspaceApp
-angular.module('wats4000FinalProject')
+angular.module('workspaceApp')
   .controller('MainCtrl', function ($scope, searchbox) {
     $scope.current = searchbox.query();
   
