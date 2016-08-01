@@ -32,7 +32,7 @@
  * # MainCtrl
  * Controller of the yourApp
  */
-angular.module('yourApp')
+angular.module('workspaceApp')
   .controller('MainCtrl', function ($scope, current) {
     $scope.current = current.query();
 
