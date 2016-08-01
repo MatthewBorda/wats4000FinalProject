@@ -1,32 +1,5 @@
-<!-- <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h1> Find Movies: {{searchbox.results[0].original_title}}</h1>
-  
-<p class="lead">
-<div ng-init="movieName='Seattle'">
-  <p>
-       <label for="movieSearch">Search:
-            <input type="text" name="movieName" ng-model="movieName">
-          </label>
-  </p>
- <p>
-          <button class="btn btn-lg btn-primary" ng-click="refreshSearchBox()">Search Movies</button>
-        
-  </p>
-  <dl>
-        <dt>Movie detail</dt>
-    <dd>0 {{searchbox}}</dd>
-     <dd>1 {{searchbox.page[1].results.original_title}}</dd>
-    <dd>2  {{searchbox.results[0].original_title}}</dd>
-    <dd>3 {{searchbox.results[0].overview}}</dd>
-    <dd>4 {{searchbox.results.overview}}</dd>
-      </dl>
-  </div>
-  </p>
-</div>
- -->
-
 <div ng-app class="jumbotron" ng-controller="MainCtrl">
-  <h1>Weather for {{searchbox.name}}</h1>
+  <h1>Weather for {{current.name}}</h1>
   <p class="lead">
     <div ng-init="location='Seattle'">
         <p>
@@ -39,14 +12,14 @@
         </p>
       <dl>
         <dt>Currently</dt>
-        <dd>{{searchbox.weather[0].main}}</dd>
-        <dd>{{searchbox.weather[0].description}}</dd>
+        <dd>{{current.weather[0].main}}</dd>
+        <dd>{{current.weather[0].description}}</dd>
         <dt>Temperature</dt>
-        <dd>{{searchbox.main.temp}}</dd>
+        <dd>{{current.main.temp}}</dd>
         <dt>Wind</dt>
-        <dd>{{current.wind.speed}} mph at {{searchbox.wind.deg}} degrees</dd>
+        <dd>{{current.wind.speed}} mph at {{current.wind.deg}} degrees</dd>
         <dt>Clouds</dt>
-        <dd>{{searchbox.clouds.all}}%</dd>
+        <dd>{{current.clouds.all}}%</dd>
       </dl>
     </div>
   </p>
