@@ -24,7 +24,7 @@
 //     });
 //   });
 //https://api.themoviedb.org/3/movie/33?api_key=0ee729f7a5162307774f1f09911d0b59
-angular.module('yourApp')
+angular.module('workspaceApp')
   .factory('searchbox', function ($resource) {
     // Service logic
     // ...
