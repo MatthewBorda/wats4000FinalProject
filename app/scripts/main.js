@@ -6,7 +6,7 @@ angular.module('workspaceApp')
   
     $scope.refreshSearchBox = function(){
         $scope.searchbox = searchbox.query({
-            movieName: $scope.movieName
+            location: $scope.location
         });
     };
   });
